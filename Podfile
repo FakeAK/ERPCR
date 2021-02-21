@@ -6,6 +6,8 @@ target 'CryptoData' do
   use_frameworks!
 
   # Pods for CryptoData
+    pod 'SDWebImageSwiftUI'
+    pod 'SnapKit', '~> 5.0.0'
 
   target 'CryptoDataTests' do
     inherit! :search_paths
