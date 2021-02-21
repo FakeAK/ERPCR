@@ -11,12 +11,23 @@ import SwiftUI
 struct CryptoListView: View {
     
     @ObservedObject var viewModel: CryptoListViewModel = CryptoListViewModel()
+    @State private var page: Int = 1
     
     var body: some View {
-        VStack {
-            PrimarySectionTitleView(title: "Currencies")
-            CurrenciesListView()
+        NavigationView {
+            VStack {
+                PrimarySectionTitleView(title: "Currencies")
+                CurrenciesListView(currencies: viewModel.currencies, didReachEnd: didReachEnd)
+            }.onAppear {
+                viewModel.fetchMarketData(page: page)
+            }
         }
+    }
+    
+    func didReachEnd() {
+        page = page + 1
+        print(page)
+        viewModel.fetchMarketData(page: page)
     }
 }
 
