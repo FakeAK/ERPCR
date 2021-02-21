@@ -40,6 +40,12 @@
 		419C459525E1B733004ADD2D /* CurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C459325E1B733004ADD2D /* CurrencySymbol.swift */; };
 		419C45A025E1C2C0004ADD2D /* CryptoCompareAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C459F25E1C2C0004ADD2D /* CryptoCompareAPIResponse.swift */; };
 		419C45A125E1C2C0004ADD2D /* CryptoCompareAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C459F25E1C2C0004ADD2D /* CryptoCompareAPIResponse.swift */; };
+		419C45B625E2CEEC004ADD2D /* CryptoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45B525E2CEEC004ADD2D /* CryptoDetailsView.swift */; };
+		419C45B725E2CEEC004ADD2D /* CryptoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45B525E2CEEC004ADD2D /* CryptoDetailsView.swift */; };
+		419C45BC25E2CEF7004ADD2D /* CryptoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45BB25E2CEF7004ADD2D /* CryptoDetailsViewController.swift */; };
+		419C45BD25E2CEF7004ADD2D /* CryptoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45BB25E2CEF7004ADD2D /* CryptoDetailsViewController.swift */; };
+		419C45C225E2CF04004ADD2D /* CryptoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45C125E2CF04004ADD2D /* CryptoDetailsViewModel.swift */; };
+		419C45C325E2CF04004ADD2D /* CryptoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45C125E2CF04004ADD2D /* CryptoDetailsViewModel.swift */; };
 		741696F7E6FA0D6994F0764D /* Pods_CryptoDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE58CF8CC374653DBB2A3DD1 /* Pods_CryptoDataTests.framework */; };
 		A3277C3EFBF82B7330B2AE77 /* Pods_CryptoData_CryptoDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1756325170AA82B4D7A4CDC /* Pods_CryptoData_CryptoDataUITests.framework */; };
 		EBE52AAE7F55C6A96F5156C7 /* Pods_CryptoData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D89840CEE5C2F8290C754C /* Pods_CryptoData.framework */; };
@@ -94,6 +100,9 @@
 		419C458A25E1B44A004ADD2D /* CryptoCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompare.swift; sourceTree = "<group>"; };
 		419C459325E1B733004ADD2D /* CurrencySymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbol.swift; sourceTree = "<group>"; };
 		419C459F25E1C2C0004ADD2D /* CryptoCompareAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareAPIResponse.swift; sourceTree = "<group>"; };
+		419C45B525E2CEEC004ADD2D /* CryptoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsView.swift; sourceTree = "<group>"; };
+		419C45BB25E2CEF7004ADD2D /* CryptoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsViewController.swift; sourceTree = "<group>"; };
+		419C45C125E2CF04004ADD2D /* CryptoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsViewModel.swift; sourceTree = "<group>"; };
 		8C7689E85E7F17624BFA5DAC /* Pods-CryptoData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoData.debug.xcconfig"; path = "Target Support Files/Pods-CryptoData/Pods-CryptoData.debug.xcconfig"; sourceTree = "<group>"; };
 		BDF1AA2938402A218370F194 /* Pods-CryptoDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoDataTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoDataTests/Pods-CryptoDataTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1756325170AA82B4D7A4CDC /* Pods_CryptoData_CryptoDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoData_CryptoDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +246,7 @@
 		419C451D25E017BE004ADD2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				419C45A825E2CECA004ADD2D /* CryptoDetails */,
 				419C452425E01B37004ADD2D /* CryptoList */,
 			);
 			path = Modules;
@@ -323,6 +333,16 @@
 			path = Calls;
 			sourceTree = "<group>";
 		};
+		419C45A825E2CECA004ADD2D /* CryptoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				419C45B525E2CEEC004ADD2D /* CryptoDetailsView.swift */,
+				419C45BB25E2CEF7004ADD2D /* CryptoDetailsViewController.swift */,
+				419C45C125E2CF04004ADD2D /* CryptoDetailsViewModel.swift */,
+			);
+			path = CryptoDetails;
+			sourceTree = "<group>";
+		};
 		96CE48BAB17A91E90082A9E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +364,7 @@
 				419C44D125E016DA004ADD2D /* Sources */,
 				419C44D225E016DA004ADD2D /* Frameworks */,
 				419C44D325E016DA004ADD2D /* Resources */,
+				DEA677378E7CAED0EEB0AB4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,6 +402,7 @@
 				419C44F225E016DB004ADD2D /* Sources */,
 				419C44F325E016DB004ADD2D /* Frameworks */,
 				419C44F425E016DB004ADD2D /* Resources */,
+				251EAE7CD84EF08C9580E0B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -486,6 +508,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		251EAE7CD84EF08C9580E0B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoData-CryptoDataUITests/Pods-CryptoData-CryptoDataUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoData-CryptoDataUITests/Pods-CryptoData-CryptoDataUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoData-CryptoDataUITests/Pods-CryptoData-CryptoDataUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		86901DEF1308A8ABE6C6D44D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -530,6 +569,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DEA677378E7CAED0EEB0AB4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoData/Pods-CryptoData-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoData/Pods-CryptoData-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoData/Pods-CryptoData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -538,13 +594,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				419C452F25E01BF2004ADD2D /* CryptoListViewModel.swift in Sources */,
+				419C45BC25E2CEF7004ADD2D /* CryptoDetailsViewController.swift in Sources */,
 				419C454525E01DF9004ADD2D /* Colors.swift in Sources */,
 				419C458125E1B148004ADD2D /* API+Routes.swift in Sources */,
 				419C453625E01C9B004ADD2D /* PrimarySectionTitleView.swift in Sources */,
+				419C45B625E2CEEC004ADD2D /* CryptoDetailsView.swift in Sources */,
 				419C458B25E1B44A004ADD2D /* CryptoCompare.swift in Sources */,
 				419C44D925E016DA004ADD2D /* AppDelegate.swift in Sources */,
 				419C44DB25E016DA004ADD2D /* SceneDelegate.swift in Sources */,
 				419C457B25E1ADD6004ADD2D /* APIResponse.swift in Sources */,
+				419C45C225E2CF04004ADD2D /* CryptoDetailsViewModel.swift in Sources */,
 				419C457225E1ADAC004ADD2D /* API+Request.swift in Sources */,
 				419C455025E02209004ADD2D /* Coin.swift in Sources */,
 				419C459425E1B733004ADD2D /* CurrencySymbol.swift in Sources */,
@@ -565,11 +624,14 @@
 				419C458225E1B148004ADD2D /* API+Routes.swift in Sources */,
 				419C455A25E026EE004ADD2D /* CurrenciesListView.swift in Sources */,
 				419C453725E01C9B004ADD2D /* PrimarySectionTitleView.swift in Sources */,
+				419C45BD25E2CEF7004ADD2D /* CryptoDetailsViewController.swift in Sources */,
+				419C45C325E2CF04004ADD2D /* CryptoDetailsViewModel.swift in Sources */,
 				419C45A125E1C2C0004ADD2D /* CryptoCompareAPIResponse.swift in Sources */,
 				419C456D25E1AD43004ADD2D /* API.swift in Sources */,
 				419C457C25E1ADD6004ADD2D /* APIResponse.swift in Sources */,
 				419C459525E1B733004ADD2D /* CurrencySymbol.swift in Sources */,
 				419C453025E01BF2004ADD2D /* CryptoListViewModel.swift in Sources */,
+				419C45B725E2CEEC004ADD2D /* CryptoDetailsView.swift in Sources */,
 				419C457325E1ADAC004ADD2D /* API+Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
