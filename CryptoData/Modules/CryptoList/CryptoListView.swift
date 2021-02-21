@@ -11,7 +11,7 @@ import SwiftUI
 struct CryptoListView: View {
     
     @ObservedObject var viewModel: CryptoListViewModel = CryptoListViewModel()
-    @State private var page: Int = 1
+    @State private var page: Int = 0
     
     var body: some View {
         NavigationView {
@@ -26,7 +26,6 @@ struct CryptoListView: View {
     
     func didReachEnd() {
         page = page + 1
-        print(page)
         viewModel.fetchMarketData(page: page)
     }
 }
