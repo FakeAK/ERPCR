@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class CryptoDetailsViewModel {
+    
+    var coin: Coin!
+}

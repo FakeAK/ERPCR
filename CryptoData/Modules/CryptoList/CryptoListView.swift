@@ -20,7 +20,7 @@ struct CryptoListView: View {
                 CurrenciesListView(currencies: viewModel.currencies, didReachEnd: didReachEnd)
             }.onAppear {
                 viewModel.fetchMarketData(page: page)
-            }
+            }.navigationBarHidden(true)
         }
     }
     
