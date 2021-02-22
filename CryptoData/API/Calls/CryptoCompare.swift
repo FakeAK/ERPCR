@@ -32,4 +32,19 @@ extension API {
         
         return request(url, method: .get)
     }
+    
+    static func fetchCoinVolume(coinSymbol: String, currencySymbol: String, limit: Int) -> AnyPublisher<APIResponse<CoinVolumeAPIResponse>, Error>? {
+        guard let endpoint = URL(
+                string: String(
+                    format: "\(API.ROOT_URL)\(Routes.coinVolume.rawValue)",
+                    coinSymbol,
+                    currencySymbol,
+                    limit
+                )
+        ) else {
+            return nil
+        }
+        
+        return request(endpoint, method: .get)
+    }
 }
