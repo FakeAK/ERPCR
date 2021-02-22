@@ -1,3 +1,38 @@
-PODFILE CHECKSUM: 91948867f7c3b9b8b62818876ae6b83af1f4e737
+PODS:
+  - AAInfographics (6.0.0)
+  - SDWebImage (5.9.3):
+    - SDWebImage/Core (= 5.9.3)
+  - SDWebImage/Core (5.9.3)
+  - SDWebImageSwiftUI (1.5.0):
+    - SDWebImage (~> 5.7)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - AAInfographics (from `https://github.com/AAChartModel/AAChartKit-Swift.git`)
+  - SDWebImageSwiftUI
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - SDWebImageSwiftUI
+    - SnapKit
+
+EXTERNAL SOURCES:
+  AAInfographics:
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
+CHECKOUT OPTIONS:
+  AAInfographics:
+    :commit: 36cc78579ef226dd6a48b1ba00874c4397265169
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
+SPEC CHECKSUMS:
+  AAInfographics: e57c6cc15ddc17df3555db6f586fb0e1b911a0b7
+  SDWebImage: a31ee8e90a97303529e03fb0c333eae0eacb88e9
+  SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 718161f4cdd5f7402b8ec9d58d6439f7b5ea4eae
 
 COCOAPODS: 1.9.3

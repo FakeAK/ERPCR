@@ -6,6 +6,9 @@ target 'CryptoData' do
   use_frameworks!
 
   # Pods for CryptoData
+    pod 'SDWebImageSwiftUI'
+    pod 'SnapKit', '~> 5.0.0'
+    pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
 
   target 'CryptoDataTests' do
     inherit! :search_paths

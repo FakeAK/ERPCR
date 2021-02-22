@@ -11,5 +11,6 @@ extension API {
     enum Routes: String {
         case availableCoinsList = "/data/blockchain/list"
         case marketCapFullData = "/data/top/mktcapfull?page=%d&limit=%d&tsym=%@"
+        case coinVolume = "/data/v2/histoday?fsym=%@&tsym=%@&limit=%d"
     }
 }
