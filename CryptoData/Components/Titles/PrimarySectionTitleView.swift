@@ -13,10 +13,10 @@ struct PrimarySectionTitleView: View {
     var title: String
     
     var body: some View {
-        Text(title)
-            .font(Font.system(size: 35))
-            .fontWeight(.heavy)
-            .foregroundColor(Color(Colors.primarySectionTitleColor))
+            Text(title)
+                .font(Font.system(size: 35))
+                .fontWeight(.heavy)
+                .foregroundColor(Color(Colors.primarySectionTitleColor))
     }
 }
 

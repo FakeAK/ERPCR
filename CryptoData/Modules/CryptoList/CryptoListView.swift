@@ -15,8 +15,10 @@ struct CryptoListView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(alignment: .leading, spacing: 10) {
                 PrimarySectionTitleView(title: "Currencies")
+                    .padding(.leading, 10)
+                    .padding(.top, 50)
                 CurrenciesListView(currencies: viewModel.currencies, didReachEnd: didReachEnd)
             }.onAppear {
                 viewModel.getLocalData()
