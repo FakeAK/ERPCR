@@ -19,6 +19,7 @@ struct CryptoListView: View {
                 PrimarySectionTitleView(title: "Currencies")
                 CurrenciesListView(currencies: viewModel.currencies, didReachEnd: didReachEnd)
             }.onAppear {
+                viewModel.getLocalData()
                 viewModel.fetchMarketData(page: page)
             }.navigationBarHidden(true)
         }
