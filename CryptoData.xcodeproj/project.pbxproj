@@ -42,6 +42,7 @@
 		419C46F325E554C1004ADD2D /* ExtensionDoubleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C46F225E554C1004ADD2D /* ExtensionDoubleTests.swift */; };
 		419C470C25E55D32004ADD2D /* ExtensionArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C470B25E55D32004ADD2D /* ExtensionArrayTests.swift */; };
 		419C475425E59890004ADD2D /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C475325E5988F004ADD2D /* LocalStorage.swift */; };
+		419C475F25E59CFC004ADD2D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 419C475E25E59CFC004ADD2D /* README.md */; };
 		741696F7E6FA0D6994F0764D /* Pods_CryptoDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE58CF8CC374653DBB2A3DD1 /* Pods_CryptoDataTests.framework */; };
 		A3277C3EFBF82B7330B2AE77 /* Pods_CryptoData_CryptoDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1756325170AA82B4D7A4CDC /* Pods_CryptoData_CryptoDataUITests.framework */; };
 		EBE52AAE7F55C6A96F5156C7 /* Pods_CryptoData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D89840CEE5C2F8290C754C /* Pods_CryptoData.framework */; };
@@ -109,6 +110,7 @@
 		419C46F225E554C1004ADD2D /* ExtensionDoubleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDoubleTests.swift; sourceTree = "<group>"; };
 		419C470B25E55D32004ADD2D /* ExtensionArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionArrayTests.swift; sourceTree = "<group>"; };
 		419C475325E5988F004ADD2D /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		419C475E25E59CFC004ADD2D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		8C7689E85E7F17624BFA5DAC /* Pods-CryptoData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoData.debug.xcconfig"; path = "Target Support Files/Pods-CryptoData/Pods-CryptoData.debug.xcconfig"; sourceTree = "<group>"; };
 		BDF1AA2938402A218370F194 /* Pods-CryptoDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoDataTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoDataTests/Pods-CryptoDataTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1756325170AA82B4D7A4CDC /* Pods_CryptoData_CryptoDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoData_CryptoDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +235,7 @@
 		419C451125E01775004ADD2D /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				419C475E25E59CFC004ADD2D /* README.md */,
 				419C451725E01786004ADD2D /* .gitignore */,
 				419C451225E0177F004ADD2D /* Podfile */,
 			);
@@ -530,6 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419C475F25E59CFC004ADD2D /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
