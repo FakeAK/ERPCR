@@ -15,7 +15,7 @@ final class CryptoListViewModel: ObservableObject {
     var subscriber: AnyCancellable? = nil
     var publisher: AnyPublisher<APIResponse<CryptoCompareAPIResponse>, Error>? = nil
     
-    func fetchMarketData(page: Int) {
+    public func fetchMarketData(page: Int) {
         publisher = API.fetchMarketCapFullData(page: page, limit: 20, currencySymbol: "EUR")
         subscriber = publisher?.sink(receiveCompletion: { (completion) in
             switch (completion) {
@@ -25,7 +25,22 @@ final class CryptoListViewModel: ObservableObject {
                 break
             }
         }, receiveValue: { (data) in
-            self.currencies += data.value.Data
+            let coins = self.currencies + data.value.Data
+            self.currencies = coins.removeDuplicates()
+            self.saveDataLocally(data: data.value.Data)
         })
+    }
+    
+    public func getLocalData() {
+        guard let localData = LocalStorageHelper.default.get(Coin.self) else { return }
+        currencies = Array(localData).removeDuplicates()
+    }
+    
+    private func saveDataLocally(data: [Coin]) {
+        do {
+            try LocalStorageHelper.default.store(data)
+        } catch {
+            print(error)
+        }
     }
 }

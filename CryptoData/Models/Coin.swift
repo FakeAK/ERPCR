@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class EurCoinRawInfo: Decodable {
     let PRICE: Double
@@ -16,17 +17,23 @@ final class CoinRAW: Decodable {
 }
 
 final class CoinInfo: Decodable {
+    let Id: String
     let Name: String
     let FullName: String
     let ImageUrl: String
 }
 
-final class Coin: Decodable, Equatable {
+final class Coin: Object, Decodable {
     
-    let shortName: String
-    let name: String
-    let imageUrl: String
-    let price: Double?
+    public override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    @objc dynamic var id: String = ""
+    @objc dynamic var shortName: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var imageUrl: String = ""
+    let price = RealmOptional<Double>()
     
     enum CodingKeys: String, CodingKey {
         case RAW
@@ -39,13 +46,20 @@ final class Coin: Decodable, Equatable {
         let rawInfo = try container.decodeIfPresent(CoinRAW.self, forKey: .RAW)
         let coinInfo = try container.decode(CoinInfo.self, forKey: .CoinInfo)
         
+        id = coinInfo.Id
         shortName = coinInfo.Name
         name = coinInfo.FullName
         imageUrl = coinInfo.ImageUrl
-        price = rawInfo?.EUR.PRICE
+        price.value = rawInfo?.EUR.PRICE
     }
     
-    static func == (lhs: Coin, rhs: Coin) -> Bool {
-        return lhs.shortName == rhs.shortName
+    override init() {}
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let coin = object as? Coin else {
+            return false
+        }
+        
+        return self.id == coin.id
     }
 }

@@ -36,14 +36,14 @@ class CryptoDetailsViewModel {
     }
     
     public func currencyValueDidChange(newValue: Double) {
-        guard let coinPrice = coin.price else { return }
+        guard let coinPrice = coin.price.value else { return }
         
         let computedNumberOfCoins = newValue / coinPrice
         didConvertCurrencyToCoin?(computedNumberOfCoins)
     }
     
     public func coinValueDidChange(numberOfCoins: Double) {
-        guard let coinPrice = coin.price else { return }
+        guard let coinPrice = coin.price.value else { return }
         
         let currencyPrice = coinPrice * numberOfCoins
         didConvertCoinToCurrency?(currencyPrice)

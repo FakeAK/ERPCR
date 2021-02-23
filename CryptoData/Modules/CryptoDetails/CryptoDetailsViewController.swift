@@ -23,7 +23,6 @@ class CryptoDetailsViewController: UIViewController {
     let coinNameLabel: UILabel
     let priceLabel: UILabel
     let chartView: AAChartView
-    let buyInfoLabel: UILabel
     let textFieldsStackView: UIStackView
     let currencyTextField: CurrencyConverterTextField
     let coinTextField: CurrencyConverterTextField
@@ -39,7 +38,6 @@ class CryptoDetailsViewController: UIViewController {
         self.coinNameLabel = UILabel()
         self.priceLabel = UILabel()
         self.chartView = AAChartView()
-        self.buyInfoLabel = UILabel()
         self.textFieldsStackView = UIStackView()
         self.currencyTextField = CurrencyConverterTextField()
         self.coinTextField = CurrencyConverterTextField()
@@ -84,7 +82,6 @@ class CryptoDetailsViewController: UIViewController {
         contentView.addSubview(textFieldsStackView)
         contentView.addSubview(buyButton)
         contentView.addSubview(chartView)
-        contentView.addSubview(buyInfoLabel)
         textFieldsStackView.addArrangedSubview(currencyTextField)
         textFieldsStackView.addArrangedSubview(coinTextField)
     }
@@ -133,19 +130,14 @@ class CryptoDetailsViewController: UIViewController {
             chart.top.equalTo(buyButton.snp.bottom).offset(50)
             chart.leading.trailing.equalToSuperview()
             chart.height.equalTo(400)
-        }
-        
-        buyInfoLabel.snp.makeConstraints { (label) in
-            label.left.right.equalToSuperview().inset(20)
-            label.top.equalTo(chartView.snp.bottom).offset(20)
-            label.height.equalTo(50)
-            label.bottom.equalToSuperview()
+            chart.bottom.equalToSuperview()
         }
     }
     
     private func makeStyle() {
         coinLogoImageView.layer.cornerRadius = CGFloat(logoSize / 2)
         priceLabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        coinNameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         coinTextField.layer.borderWidth = 1
         currencyTextField.layer.borderWidth = 1
         coinTextField.layer.borderColor = UIColor.red.cgColor
@@ -158,8 +150,9 @@ class CryptoDetailsViewController: UIViewController {
         currencyTextField.keyboardType = .decimalPad
         coinTextField.layer.cornerRadius = 5
         currencyTextField.layer.cornerRadius = 5
-        buyButton.backgroundColor = .green
+        buyButton.backgroundColor = Colors.confirmColor
         buyButton.layer.cornerRadius = 50 / 2
+        buyButton.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
     }
     
     private func setCoinData() {
@@ -171,8 +164,7 @@ class CryptoDetailsViewController: UIViewController {
         formatter.decimalSeparator = ","
         formatter.groupingSeparator = ""
         
-        buyInfoLabel.text = "ok"
-        if let price = viewModel.coin.price, let formattedPrice = formatter.string(from: NSNumber(value: price)) {
+        if let price = viewModel.coin.price.value, let formattedPrice = formatter.string(from: NSNumber(value: price)) {
             priceLabel.text = "\(formattedPrice)€"
         }
         if let imageUrl = URL(string: "https://www.cryptocompare.com/\(viewModel.coin.imageUrl)") {
@@ -191,7 +183,7 @@ class CryptoDetailsViewController: UIViewController {
             .dataLabelsEnabled(false)
             .tooltipValueSuffix("EUR")
             .categories([])
-            .colorsTheme(["#fe117c","#ffc069","#06caf4","#7dffc0"])
+            .colorsTheme(["#fe117c"])
             .series([
                 AASeriesElement()
                     .name(viewModel.coin.name)
