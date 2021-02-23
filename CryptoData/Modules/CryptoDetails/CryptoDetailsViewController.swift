@@ -140,8 +140,8 @@ class CryptoDetailsViewController: UIViewController {
         coinNameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         coinTextField.layer.borderWidth = 1
         currencyTextField.layer.borderWidth = 1
-        coinTextField.layer.borderColor = UIColor.red.cgColor
-        currencyTextField.layer.borderColor = UIColor.red.cgColor
+        coinTextField.layer.borderColor = UIColor.black.cgColor
+        currencyTextField.layer.borderColor = UIColor.black.cgColor
         textFieldsStackView.axis = .horizontal
         textFieldsStackView.distribution = .fillEqually;
         textFieldsStackView.alignment = .fill;
@@ -158,13 +158,7 @@ class CryptoDetailsViewController: UIViewController {
     private func setCoinData() {
         coinNameLabel.text = viewModel.coin.name.uppercased()
         
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 2
-        formatter.decimalSeparator = ","
-        formatter.groupingSeparator = ""
-        
-        if let price = viewModel.coin.price.value, let formattedPrice = formatter.string(from: NSNumber(value: price)) {
+        if let price = viewModel.coin.price.value, let formattedPrice = price.toString() {
             priceLabel.text = "\(formattedPrice)€"
         }
         if let imageUrl = URL(string: "https://www.cryptocompare.com/\(viewModel.coin.imageUrl)") {
@@ -198,7 +192,9 @@ class CryptoDetailsViewController: UIViewController {
     }
     
     private func didConvertCoinToCurrency(currency: Double) {
-        currencyTextField.text = "\(currency)"
+        if let formattedPrice = currency.toString() {
+            currencyTextField.text = "\(formattedPrice)€"
+        }
     }
 }
 

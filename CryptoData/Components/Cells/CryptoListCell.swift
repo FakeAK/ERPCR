@@ -30,7 +30,7 @@ struct CryptoListCell: View {
                     Text("\(coin.shortName)")
                         .foregroundColor(Color.black)
                         .font(Font.system(size: 10, weight: .medium))
-                }
+                }.padding(.leading, 10)
                 
                 Spacer()
                 
