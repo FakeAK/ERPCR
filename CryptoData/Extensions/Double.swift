@@ -15,6 +15,7 @@ extension Double {
         formatter.minimumFractionDigits = 2
         formatter.decimalSeparator = ","
         formatter.groupingSeparator = " "
+        formatter.roundingMode = .halfUp
         
         guard let formattedValue = formatter.string(from: NSNumber(value: self)) else { return nil }
         return formattedValue
