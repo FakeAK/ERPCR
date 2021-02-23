@@ -1,5 +1,7 @@
 PODS:
   - AAInfographics (6.0.0)
+  - Nimble (9.0.0)
+  - Quick (3.1.2)
   - Realm (10.6.0):
     - Realm/Headers (= 10.6.0)
   - Realm/Headers (10.6.0)
@@ -14,12 +16,16 @@ PODS:
 
 DEPENDENCIES:
   - AAInfographics (from `https://github.com/AAChartModel/AAChartKit-Swift.git`)
+  - Nimble
+  - Quick
   - RealmSwift
   - SDWebImageSwiftUI
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
+    - Nimble
+    - Quick
     - Realm
     - RealmSwift
     - SDWebImage
@@ -37,12 +43,14 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AAInfographics: e57c6cc15ddc17df3555db6f586fb0e1b911a0b7
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
+  Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
   Realm: 1ef421d4581513400ad4f8bd39c8157f3266c62e
   RealmSwift: f80216fb8334b01ccf526e4f2dd5ff0da61863a2
   SDWebImage: a31ee8e90a97303529e03fb0c333eae0eacb88e9
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: c5d429e153c69cfdd28e271419b2be1c7bfa1f85
+PODFILE CHECKSUM: 1090c417c71fa136b1cacd58a1fe6806ed9fc702
 
 COCOAPODS: 1.10.1
