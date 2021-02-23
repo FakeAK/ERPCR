@@ -15,22 +15,14 @@ struct CurrenciesListView: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack {
-                ForEach(currencies, id: \.shortName) { coin in
-                    NavigationLink(
-                        destination: CryptoDetailsView(coin: coin)
-                            .navigationBarTitle("", displayMode: .inline)
-                    ) {
-                        HStack {
-                            Text(coin.name)
-                            Text("\(coin.shortName)")
-                            Text("\(coin.price ?? 0)")
+            LazyVStack(alignment: .leading, spacing: 15) {
+                ForEach(currencies, id: \.self) { coin in
+                    CryptoListCell(coin: coin)
+                        .onAppear {
+                            if coin == currencies.last {
+                                didReachEnd?()
+                            }
                         }
-                    }.onAppear {
-                        if coin == currencies.last {
-                            didReachEnd?()
-                        }
-                    }
                 }
             }
         }

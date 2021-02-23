@@ -50,6 +50,18 @@
 		419C45DF25E3B397004ADD2D /* CoinVolumeAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45DA25E3B394004ADD2D /* CoinVolumeAPIResponse.swift */; };
 		419C45F425E3F17B004ADD2D /* CurrencyConverterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45F325E3F17B004ADD2D /* CurrencyConverterTextField.swift */; };
 		419C45F525E3F17B004ADD2D /* CurrencyConverterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45F325E3F17B004ADD2D /* CurrencyConverterTextField.swift */; };
+		419C45FD25E41780004ADD2D /* LocalStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45FC25E41780004ADD2D /* LocalStorageHelper.swift */; };
+		419C45FE25E41780004ADD2D /* LocalStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C45FC25E41780004ADD2D /* LocalStorageHelper.swift */; };
+		419C460F25E42DDF004ADD2D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C460E25E42DDF004ADD2D /* String.swift */; };
+		419C461025E42DDF004ADD2D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C460E25E42DDF004ADD2D /* String.swift */; };
+		419C464025E45F61004ADD2D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C463F25E45F61004ADD2D /* Array.swift */; };
+		419C464125E45F61004ADD2D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C463F25E45F61004ADD2D /* Array.swift */; };
+		419C464725E504C2004ADD2D /* CryptoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C464625E504C2004ADD2D /* CryptoListCell.swift */; };
+		419C464825E504C2004ADD2D /* CryptoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C464625E504C2004ADD2D /* CryptoListCell.swift */; };
+		419C465125E50794004ADD2D /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C465025E50794004ADD2D /* RoundImage.swift */; };
+		419C465225E50794004ADD2D /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C465025E50794004ADD2D /* RoundImage.swift */; };
+		419C465A25E50AC1004ADD2D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C465925E50AC1004ADD2D /* Double.swift */; };
+		419C465B25E50AC1004ADD2D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C465925E50AC1004ADD2D /* Double.swift */; };
 		741696F7E6FA0D6994F0764D /* Pods_CryptoDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE58CF8CC374653DBB2A3DD1 /* Pods_CryptoDataTests.framework */; };
 		A3277C3EFBF82B7330B2AE77 /* Pods_CryptoData_CryptoDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1756325170AA82B4D7A4CDC /* Pods_CryptoData_CryptoDataUITests.framework */; };
 		EBE52AAE7F55C6A96F5156C7 /* Pods_CryptoData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D89840CEE5C2F8290C754C /* Pods_CryptoData.framework */; };
@@ -109,6 +121,12 @@
 		419C45C125E2CF04004ADD2D /* CryptoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsViewModel.swift; sourceTree = "<group>"; };
 		419C45DA25E3B394004ADD2D /* CoinVolumeAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinVolumeAPIResponse.swift; sourceTree = "<group>"; };
 		419C45F325E3F17B004ADD2D /* CurrencyConverterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterTextField.swift; sourceTree = "<group>"; };
+		419C45FC25E41780004ADD2D /* LocalStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageHelper.swift; sourceTree = "<group>"; };
+		419C460E25E42DDF004ADD2D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		419C463F25E45F61004ADD2D /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		419C464625E504C2004ADD2D /* CryptoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListCell.swift; sourceTree = "<group>"; };
+		419C465025E50794004ADD2D /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
+		419C465925E50AC1004ADD2D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		8C7689E85E7F17624BFA5DAC /* Pods-CryptoData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoData.debug.xcconfig"; path = "Target Support Files/Pods-CryptoData/Pods-CryptoData.debug.xcconfig"; sourceTree = "<group>"; };
 		BDF1AA2938402A218370F194 /* Pods-CryptoDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoDataTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoDataTests/Pods-CryptoDataTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1756325170AA82B4D7A4CDC /* Pods_CryptoData_CryptoDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoData_CryptoDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +279,8 @@
 		419C451E25E017C1004ADD2D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				419C464F25E505EC004ADD2D /* Images */,
+				419C464525E50474004ADD2D /* Cells */,
 				419C453425E01C8F004ADD2D /* Titles */,
 			);
 			path = Components;
@@ -269,6 +289,7 @@
 		419C451F25E017C5004ADD2D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				419C45FC25E41780004ADD2D /* LocalStorageHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -276,6 +297,9 @@
 		419C452025E017C9004ADD2D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				419C460E25E42DDF004ADD2D /* String.swift */,
+				419C463F25E45F61004ADD2D /* Array.swift */,
+				419C465925E50AC1004ADD2D /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +381,22 @@
 				419C45F325E3F17B004ADD2D /* CurrencyConverterTextField.swift */,
 			);
 			path = UITextFields;
+			sourceTree = "<group>";
+		};
+		419C464525E50474004ADD2D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				419C464625E504C2004ADD2D /* CryptoListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		419C464F25E505EC004ADD2D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				419C465025E50794004ADD2D /* RoundImage.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		96CE48BAB17A91E90082A9E4 /* Frameworks */ = {
@@ -609,17 +649,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419C45FD25E41780004ADD2D /* LocalStorageHelper.swift in Sources */,
 				419C452F25E01BF2004ADD2D /* CryptoListViewModel.swift in Sources */,
 				419C45BC25E2CEF7004ADD2D /* CryptoDetailsViewController.swift in Sources */,
 				419C454525E01DF9004ADD2D /* Colors.swift in Sources */,
+				419C465A25E50AC1004ADD2D /* Double.swift in Sources */,
+				419C464725E504C2004ADD2D /* CryptoListCell.swift in Sources */,
 				419C458125E1B148004ADD2D /* API+Routes.swift in Sources */,
 				419C453625E01C9B004ADD2D /* PrimarySectionTitleView.swift in Sources */,
+				419C464025E45F61004ADD2D /* Array.swift in Sources */,
 				419C45DB25E3B395004ADD2D /* CoinVolumeAPIResponse.swift in Sources */,
 				419C45B625E2CEEC004ADD2D /* CryptoDetailsView.swift in Sources */,
+				419C465125E50794004ADD2D /* RoundImage.swift in Sources */,
 				419C458B25E1B44A004ADD2D /* CryptoCompare.swift in Sources */,
 				419C44D925E016DA004ADD2D /* AppDelegate.swift in Sources */,
 				419C44DB25E016DA004ADD2D /* SceneDelegate.swift in Sources */,
 				419C45F425E3F17B004ADD2D /* CurrencyConverterTextField.swift in Sources */,
+				419C460F25E42DDF004ADD2D /* String.swift in Sources */,
 				419C457B25E1ADD6004ADD2D /* APIResponse.swift in Sources */,
 				419C45C225E2CF04004ADD2D /* CryptoDetailsViewModel.swift in Sources */,
 				419C457225E1ADAC004ADD2D /* API+Request.swift in Sources */,
@@ -636,6 +682,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419C461025E42DDF004ADD2D /* String.swift in Sources */,
+				419C464125E45F61004ADD2D /* Array.swift in Sources */,
 				419C45DF25E3B397004ADD2D /* CoinVolumeAPIResponse.swift in Sources */,
 				419C44F025E016DA004ADD2D /* CryptoDataTests.swift in Sources */,
 				419C454625E01DF9004ADD2D /* Colors.swift in Sources */,
@@ -644,8 +692,12 @@
 				419C455A25E026EE004ADD2D /* CurrenciesListView.swift in Sources */,
 				419C453725E01C9B004ADD2D /* PrimarySectionTitleView.swift in Sources */,
 				419C45F525E3F17B004ADD2D /* CurrencyConverterTextField.swift in Sources */,
+				419C464825E504C2004ADD2D /* CryptoListCell.swift in Sources */,
+				419C465B25E50AC1004ADD2D /* Double.swift in Sources */,
 				419C45BD25E2CEF7004ADD2D /* CryptoDetailsViewController.swift in Sources */,
+				419C45FE25E41780004ADD2D /* LocalStorageHelper.swift in Sources */,
 				419C45C325E2CF04004ADD2D /* CryptoDetailsViewModel.swift in Sources */,
+				419C465225E50794004ADD2D /* RoundImage.swift in Sources */,
 				419C45A125E1C2C0004ADD2D /* CryptoCompareAPIResponse.swift in Sources */,
 				419C456D25E1AD43004ADD2D /* API.swift in Sources */,
 				419C457C25E1ADD6004ADD2D /* APIResponse.swift in Sources */,
