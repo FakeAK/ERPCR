@@ -9,6 +9,7 @@ target 'CryptoData' do
     pod 'SDWebImageSwiftUI'
     pod 'SnapKit', '~> 5.0.0'
     pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
+    pod 'RealmSwift'
 
   target 'CryptoDataTests' do
     inherit! :search_paths
