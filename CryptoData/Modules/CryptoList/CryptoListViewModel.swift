@@ -24,7 +24,8 @@ final class CryptoListViewModel: ObservableObject {
             case .finished:
                 break
             }
-        }, receiveValue: { (data) in
+        }, receiveValue: { [weak self] (data) in
+            guard let self = self else { return }
             let coins = self.currencies + data.value.Data
             self.currencies = coins.removeDuplicates()
             self.saveDataLocally(data: data.value.Data)

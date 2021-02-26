@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class CryptoDetailsViewModel {
+final class CryptoDetailsViewModel {
     
     var coinHistoricalData: [CoinHistoricalData]?
     var coin: Coin!
@@ -20,6 +20,12 @@ class CryptoDetailsViewModel {
     var didConvertCurrencyToCoin: ((Double) -> Void)?
     var didConvertCoinToCurrency: ((Double) -> Void)?
     
+    deinit {
+        subscriber = nil
+        publisher = nil
+        coinHistoricalData = nil
+    }
+    
     public func fetchVolume() {
         publisher = API.fetchCoinVolume(coinSymbol: coin.shortName, currencySymbol: "EUR", limit: 2000)
         subscriber = publisher?.sink(receiveCompletion: { (completion) in
@@ -29,7 +35,8 @@ class CryptoDetailsViewModel {
             case .finished:
                 break
             }
-        }, receiveValue: { (data) in
+        }, receiveValue: { [weak self] (data) in
+            guard let self = self else { return }
             self.coinHistoricalData = data.value.Data.Data
             self.didFetchHistoricalData?(self.coinHistoricalData!)
         })

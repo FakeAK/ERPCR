@@ -11,7 +11,7 @@ import SnapKit
 import SDWebImage
 import AAInfographics
 
-class CryptoDetailsViewController: UIViewController {
+final class CryptoDetailsViewController: UIViewController {
     
     // MARK: - Attributes
     let viewModel: CryptoDetailsViewModel = CryptoDetailsViewModel()
@@ -68,9 +68,38 @@ class CryptoDetailsViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.didFetchHistoricalData = didFetchHistoricalData
-        viewModel.didConvertCurrencyToCoin = didConvertCurrencyToCoin
-        viewModel.didConvertCoinToCurrency = didConvertCoinToCurrency
+        viewModel.didFetchHistoricalData = { [weak self] historicalData in
+            guard let self = self else { return }
+            let chartModel = AAChartModel()
+                .title("Price over time".uppercased())
+                .chartType(.area)
+                .animationType(.swingTo)
+                .dataLabelsEnabled(false)
+                .legendEnabled(false)
+                .tooltipEnabled(true)
+                .dataLabelsEnabled(false)
+                .tooltipValueSuffix("EUR")
+                .categories([])
+                .colorsTheme(["#fe117c"])
+                .series([
+                    AASeriesElement()
+                        .name(self.viewModel.coin.name)
+                        .data(historicalData.map { $0.close }),
+                ])
+            
+            self.chartView.aa_drawChartWithChartModel(chartModel)
+            
+        }
+        
+        viewModel.didConvertCurrencyToCoin = { [weak self] coin in
+            self?.coinTextField.text = "\(coin)"
+        }
+        
+        viewModel.didConvertCoinToCurrency = { [weak self] currency in
+            if let formattedPrice = currency.toString() {
+                self?.currencyTextField.text = "\(formattedPrice)€"
+            }
+        }
     }
     
     private func addSubviews() {
@@ -163,37 +192,6 @@ class CryptoDetailsViewController: UIViewController {
         }
         if let imageUrl = URL(string: "https://www.cryptocompare.com/\(viewModel.coin.imageUrl)") {
             coinLogoImageView.sd_setImage(with: imageUrl)
-        }
-    }
-    
-    private func didFetchHistoricalData(historicalData: [CoinHistoricalData]) {
-        let chartModel = AAChartModel()
-            .title("Price over time".uppercased())
-            .chartType(.area)
-            .animationType(.swingTo)
-            .dataLabelsEnabled(false)
-            .legendEnabled(false)
-            .tooltipEnabled(true)
-            .dataLabelsEnabled(false)
-            .tooltipValueSuffix("EUR")
-            .categories([])
-            .colorsTheme(["#fe117c"])
-            .series([
-                AASeriesElement()
-                    .name(viewModel.coin.name)
-                    .data(historicalData.map { $0.close }),
-            ])
-        
-        chartView.aa_drawChartWithChartModel(chartModel)
-    }
-    
-    private func didConvertCurrencyToCoin(coin: Double) {
-        coinTextField.text = "\(coin)"
-    }
-    
-    private func didConvertCoinToCurrency(currency: Double) {
-        if let formattedPrice = currency.toString() {
-            currencyTextField.text = "\(formattedPrice)€"
         }
     }
 }
